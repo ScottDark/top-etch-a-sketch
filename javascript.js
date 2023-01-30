@@ -8,7 +8,9 @@ function createDefaultDivGrid() {
     const container = document.querySelector(".container");
     const div = document.createElement("div");
     const createDiv = container.appendChild(div);
+    let addDefaultClassToDiv = createDiv.classList.add(`divSquare`);
     let addClassToDiv = createDiv.classList.add(`div${i}`);
     container.addClassToDiv;
+    container.addDefaultClassToDiv;
   }
 }
