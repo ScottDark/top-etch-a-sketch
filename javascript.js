@@ -1,0 +1,2 @@
+/* Returns: Divs */
+function createDefaultDivGrid() {}
