@@ -2,8 +2,7 @@ window.onload = createDefaultDivGrid();
 
 /* Creates 16x16 divs */
 function createDefaultDivGrid() {
-  //   let numberOfChildDivs = container.children.length + 1;
-
+  // Creates 16 divs sharing same class name and unique iterable class name
   for (let i = 1; i <= 16; i++) {
     const container = document.querySelector(".container");
     const div = document.createElement("div");
@@ -13,4 +12,10 @@ function createDefaultDivGrid() {
     container.addClassToDiv;
     container.addDefaultClassToDiv;
   }
+  // Insert css rule to stylesheet
+  const stylesheet = window.document.styleSheets[0];
+  stylesheet.insertRule(
+    ".divSquare { border: solid black 3px }",
+    stylesheet.cssRules.length
+  );
 }
