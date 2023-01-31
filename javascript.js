@@ -17,7 +17,6 @@ function createDefaultDivGrid() {
   stylesheet.insertRule(
     `.divSquare { 
         border: solid black 3px; 
-        height: 20vh;
         width: 20vw;
         flex-grow: 1;}`,
     stylesheet.cssRules.length
