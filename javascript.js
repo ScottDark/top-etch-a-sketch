@@ -22,13 +22,23 @@ function createDefaultDivGrid() {
   changeDivColorOnHover();
 }
 
-/* Change div color to black on hover */
+/* Returns: random color RGB */
+function randomColor() {
+  let color = [];
+
+  for (let i = 0; i < 3; i++) {
+    color.push(Math.floor(Math.random() * 256));
+  }
+  return "rgb(" + color.join(", ") + ")";
+}
+
+/* Change color of div on hover */
 function changeDivColorOnHover() {
   const divSquare = document.querySelectorAll(".divSquare");
 
   divSquare.forEach(function (element) {
     element.addEventListener(`mouseover`, function () {
-      element.style.background = "black";
+      element.style.background = randomColor();
     });
   });
 }
