@@ -15,7 +15,11 @@ function createDefaultDivGrid() {
   // Insert css rule to stylesheet
   const stylesheet = window.document.styleSheets[0];
   stylesheet.insertRule(
-    ".divSquare { border: solid black 3px }",
+    `.divSquare { 
+        border: solid black 3px; 
+        height: 20vh;
+        width: 20vw;
+        flex-grow: 1;}`,
     stylesheet.cssRules.length
   );
 }

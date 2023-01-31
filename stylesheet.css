@@ -8,4 +8,8 @@ body {
 }
 .container {
   min-height: 100vh;
+  border: solid black 3px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
 }
