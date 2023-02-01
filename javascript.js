@@ -43,7 +43,7 @@ function changeDivColorOnHover() {
     });
   });
 }
-
+/* Returns: Grid Size H & W from user prompt*/
 function promptUserGridSize() {
   const button = document.querySelector(".newGridBtn");
 
@@ -63,7 +63,7 @@ function promptUserGridSize() {
     }
   });
 }
-
+/* Reset grid to default settings */
 function removeCurrentGrid() {
   const divSquare = document.querySelectorAll(".divSquare");
 
@@ -71,9 +71,10 @@ function removeCurrentGrid() {
     element.style.background = "";
   });
 }
-
+/* Create new grid from user prompt */
 function createNewGrid() {}
 
+/* Calls everything to create new grid from user */
 function createNewGridFromUser() {
   promptUserGridSize();
   removeCurrentGrid();

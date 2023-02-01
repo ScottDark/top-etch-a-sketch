@@ -19,12 +19,13 @@ body {
   display: flex;
   width: auto;
   height: 4vh;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.788);
 }
 
-.newGridBtn {
+.newGridBtn,
+.reset {
   height: 2vh;
   width: 10vw;
   border-radius: 12px;
