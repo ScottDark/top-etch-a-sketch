@@ -46,7 +46,7 @@ function changeDivColorOnHover() {
   });
 }
 
-/* Returns: Grid Size H & W from user prompt*/
+/* Returns: Grid Size user*/
 function promptUserGridSize() {
   const button = document.querySelector(".newGridBtn");
 
