@@ -20,8 +20,8 @@ function createDefaultDivGrid() {
     stylesheet.cssRules.length
   );
   changeDivColorOnHover();
-  promptUserGridSize();
-  resetGridBtn();
+  promptUserGridSize(); // Add Event listener
+  resetGridBtn(); // Add Event Listener
 }
 
 /* Returns: random color RGB */
@@ -86,9 +86,47 @@ function resetGridBtn() {
   button.addEventListener("click", removeCurrentGrid);
 }
 
-/* Create new grid from user prompt */
-function createNewGrid(userGridSize) {}
+/* Returns: New grid layout
+ * args: array [height, width] */
+function createNewGrid(userGridSize) {
+  removeCurrentDivs();
 
+  let gridRows = 0;
+  let gridColumns = 0;
+
+  gridRows = userGridSize[0];
+  gridColumns = userGridSize[1];
+
+  let totalGridDivs = gridRows * gridColumns;
+
+  // Creates 16 divs sharing same class name and unique iterable class name
+  for (let i = 1; i <= totalGridDivs; i++) {
+    const gridContainer = document.querySelector(".gridContainer");
+    const div = document.createElement("div");
+    const createDiv = gridContainer.appendChild(div);
+    let addDefaultClassToDiv = createDiv.classList.add("divSquare");
+    let addClassToDiv = createDiv.classList.add(`div${i}`);
+    gridContainer.addClassToDiv;
+    gridContainer.addDefaultClassToDiv;
+  }
+  // Insert css rule to stylesheet
+  const stylesheet = window.document.styleSheets[0];
+  stylesheet.insertRule(
+    `.divSquare {
+      background-color: rgba(255, 255, 255, 0.8);}`,
+    stylesheet.cssRules.length
+  );
+  changeDivColorOnHover();
+}
+
+/* Removes all divSquare divs */
+function removeCurrentDivs() {
+  const currentDiv = document.querySelectorAll(".divSquare");
+
+  currentDiv.forEach((element) => {
+    element.remove();
+  });
+}
 /* Calls everything to create new grid from user */
 function createNewGridFromUser(userGridSize) {
   removeCurrentGrid();
