@@ -58,12 +58,19 @@ function promptUserGridSize() {
       alert("Please enter numbers only");
       promptUserGridSize();
     } else {
+      removeCurrentGrid();
       return userGridSize;
     }
   });
 }
 
-function removeCurrentGrid() {}
+function removeCurrentGrid() {
+  const divSquare = document.querySelectorAll(".divSquare");
+
+  divSquare.forEach(function (element) {
+    element.style.background = "";
+  });
+}
 
 function createNewGrid() {}
 
