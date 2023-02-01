@@ -9,9 +9,27 @@ body {
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(16, [col-start] 1fr);
-  gap: 1px;
   background-color: #2196f3;
   padding: 0px;
   width: 100vw;
-  height: 100vh;
+  height: 96vh;
+}
+
+.headerContainer {
+  display: flex;
+  width: auto;
+  height: 4vh;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.788);
+}
+
+.newGridBtn {
+  height: 2vh;
+  width: 10vw;
+  border-radius: 12px;
+  border: 2px solid teal;
+  color: white;
+  background-color: rgb(34, 81, 182);
+  font-weight: 500;
 }

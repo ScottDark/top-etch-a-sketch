@@ -20,6 +20,7 @@ function createDefaultDivGrid() {
     stylesheet.cssRules.length
   );
   changeDivColorOnHover();
+  createNewGridFromUser();
 }
 
 /* Returns: random color RGB */
@@ -41,4 +42,33 @@ function changeDivColorOnHover() {
       element.style.background = randomColor();
     });
   });
+}
+
+function promptUserGridSize() {
+  const button = document.querySelector(".newGridBtn");
+
+  button.addEventListener("click", function () {
+    let userGridSize = [];
+    userGridSize[0] = +prompt("Enter height of grid");
+    userGridSize[1] = +prompt("Enter width of grid");
+
+    if (userGridSize[0] === 0 && userGridSize[1] === 0) {
+      // Return nothing
+    } else if (isNaN(userGridSize[0] || userGridSize[1])) {
+      alert("Please enter numbers only");
+      promptUserGridSize();
+    } else {
+      return userGridSize;
+    }
+  });
+}
+
+function removeCurrentGrid() {}
+
+function createNewGrid() {}
+
+function createNewGridFromUser() {
+  promptUserGridSize();
+  removeCurrentGrid();
+  createNewGrid();
 }
