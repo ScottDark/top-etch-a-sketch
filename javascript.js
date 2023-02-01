@@ -21,6 +21,7 @@ function createDefaultDivGrid() {
   );
   changeDivColorOnHover();
   createNewGridFromUser();
+  resetGridBtn();
 }
 
 /* Returns: random color RGB */
@@ -43,6 +44,7 @@ function changeDivColorOnHover() {
     });
   });
 }
+
 /* Returns: Grid Size H & W from user prompt*/
 function promptUserGridSize() {
   const button = document.querySelector(".newGridBtn");
@@ -71,6 +73,13 @@ function removeCurrentGrid() {
     element.style.background = "";
   });
 }
+
+function resetGridBtn() {
+  const button = document.querySelector(".btnReset");
+
+  button.addEventListener("click", removeCurrentGrid);
+}
+
 /* Create new grid from user prompt */
 function createNewGrid() {}
 
