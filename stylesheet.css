@@ -10,7 +10,6 @@ body {
   display: grid;
   grid-template-columns: repeat(16, [col-start] 1fr);
   background-color: #2196f3;
-  padding: 0px;
   width: 100vw;
   height: 95vh;
 }

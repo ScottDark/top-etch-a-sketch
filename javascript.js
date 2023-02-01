@@ -19,6 +19,7 @@ function createDefaultDivGrid() {
       background-color: rgba(255, 255, 255, 0.8);}`,
     stylesheet.cssRules.length
   );
+
   changeDivColorOnHover();
   promptUserGridSize(); // Add Event listener
   resetGridBtn(); // Add Event Listener
