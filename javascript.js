@@ -74,6 +74,7 @@ function removeCurrentGrid() {
   });
 }
 
+/* Resets Grid from reset button */
 function resetGridBtn() {
   const button = document.querySelector(".btnReset");
 
