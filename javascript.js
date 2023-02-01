@@ -51,14 +51,20 @@ function promptUserGridSize() {
 
   button.addEventListener("click", function () {
     let userGridSize = [];
-    userGridSize[0] = +prompt("Enter height of grid");
-    userGridSize[1] = +prompt("Enter width of grid");
+    userGridSize[0] = +prompt("Enter height of grid: 1-100");
+    userGridSize[1] = +prompt("Enter width of grid: 1-100");
 
     if (userGridSize[0] === 0 && userGridSize[1] === 0) {
       // Return nothing
     } else if (isNaN(userGridSize[0] || userGridSize[1])) {
       alert("Please enter numbers only");
-      promptUserGridSize();
+    } else if (
+      userGridSize[0] < 0 ||
+      userGridSize[0] > 100 ||
+      userGridSize[1] < 0 ||
+      userGridSize[1] > 100
+    ) {
+      alert("Please enter in number between 1 and 100 only");
     } else {
       removeCurrentGrid();
       return userGridSize;
