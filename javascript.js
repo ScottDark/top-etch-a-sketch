@@ -50,20 +50,14 @@ function promptUserGridSize() {
   const button = document.querySelector(".newGridBtn");
 
   button.addEventListener("click", function () {
-    let userGridSize = [];
-    userGridSize[0] = +prompt("Enter height of grid: 1-100");
-    userGridSize[1] = +prompt("Enter width of grid: 1-100");
+    let userGridSize = 0;
+    userGridSize = +prompt("Enter size of grid 1-100");
 
-    if (userGridSize[0] === 0 && userGridSize[1] === 0) {
+    if (userGridSize === 0) {
       // Return nothing
-    } else if (isNaN(userGridSize[0] || userGridSize[1])) {
+    } else if (isNaN(userGridSize)) {
       alert("Please enter numbers only");
-    } else if (
-      userGridSize[0] < 0 ||
-      userGridSize[0] > 100 ||
-      userGridSize[1] < 0 ||
-      userGridSize[1] > 100
-    ) {
+    } else if (userGridSize < 0 || userGridSize > 100) {
       alert("Please enter in number between 1 and 100 only");
     } else {
       return createNewGridFromUser(userGridSize);
@@ -91,13 +85,7 @@ function resetGridBtn() {
 function createNewGrid(userGridSize) {
   removeCurrentDivs();
 
-  let gridRows = 0;
-  let gridColumns = 0;
-
-  gridRows = userGridSize[0];
-  gridColumns = userGridSize[1];
-
-  let totalGridDivs = gridRows * gridColumns;
+  let totalGridDivs = userGridSize ** 2;
 
   // Creates 16 divs sharing same class name and unique iterable class name
   for (let i = 1; i <= totalGridDivs; i++) {
