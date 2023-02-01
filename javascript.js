@@ -104,6 +104,11 @@ function createNewGrid(userGridSize) {
       background-color: rgba(255, 255, 255, 0.8);}`,
     stylesheet.cssRules.length
   );
+
+  let gridTemplateColumns = document.querySelector(".gridContainer");
+
+  gridTemplateColumns.style.gridTemplateColumns = `repeat(${userGridSize}, [col-start] 1fr)`;
+
   changeDivColorOnHover();
 }
 
