@@ -20,7 +20,7 @@ function createDefaultDivGrid() {
     stylesheet.cssRules.length
   );
   changeDivColorOnHover();
-  createNewGridFromUser();
+  promptUserGridSize();
   resetGridBtn();
 }
 
@@ -66,8 +66,7 @@ function promptUserGridSize() {
     ) {
       alert("Please enter in number between 1 and 100 only");
     } else {
-      removeCurrentGrid();
-      return userGridSize;
+      return createNewGridFromUser(userGridSize);
     }
   });
 }
@@ -88,11 +87,10 @@ function resetGridBtn() {
 }
 
 /* Create new grid from user prompt */
-function createNewGrid() {}
+function createNewGrid(userGridSize) {}
 
 /* Calls everything to create new grid from user */
-function createNewGridFromUser() {
-  promptUserGridSize();
+function createNewGridFromUser(userGridSize) {
   removeCurrentGrid();
-  createNewGrid();
+  createNewGrid(userGridSize);
 }
