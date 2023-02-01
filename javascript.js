@@ -63,7 +63,7 @@ function promptUserGridSize() {
     }
   });
 }
-/* Reset grid to default settings */
+/* Reset grid to default color */
 function removeCurrentGrid() {
   const divSquare = document.querySelectorAll(".divSquare");
 
